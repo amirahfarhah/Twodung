@@ -1,0 +1,179 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Homepage</title>
+</head>
+<body>
+  <marquee>WELCOME TO OUR WEBSITE AND COME GET 10% OFF AS YOUR FIRST PURCHASE WITH US</marquee>
+  <div class="container">
+    <div class="nav-bar">
+      <div class="left-side">
+        <div class="brand-logo">
+          <img src="images/logo.png" style = "width:100px;height:50px;margin-top:30px;">
+        </div>
+        <div class="nav-brand"></div>
+      </div>
+
+      <div class="right-side">
+        <div class="nav-link active-nav-link">
+          <a href="index.html">HOME</a>
+        </div>
+
+        <div class="nav-link">
+          <a href="about.html">ABOUT US</a>
+        </div>
+
+        <div class="nav-link">
+          <div class="dropdown">
+            <a class="dropbtn" style="font-size:15px">SHOP
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="bawal.html">BAWAL</a>
+              <a href="shawl.html">SHAWL</a>
+              <a href="pleated.html">PLEATED</a>
+              <a href="accessories.html">ACCESSORIES</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-link">
+          <a href="contact.html">CONTACT US</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/slider1.jpg" style="width:100%">
+      <div class="text">NEW ARRIVAL</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/slider2.jpg" style="width:100%">
+      <div class="text">NEW ARRIVAL</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/slider3.jpg" style="width:100%">
+      <div class="text">NEW ARRIVAL</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/slider4.jpg" style="width:100%">
+      <div class="text">NEW ARRIVAL</div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+  <div class="container">
+
+    <div class="content">
+      <div class="menu-items">
+
+        <div class="menu-item">
+          <div class="menu-img-background" style="background-image:url(images/bawal.jpg)"></div> 
+
+          <div class="button-content">
+            <a href="bawal.html" class="button-content">BAWAL</a>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-img-background" style="background-image:url(images/pleated.jpg)"></div>
+
+            <div class="button-content">
+              <a href="pleated.html" class="button-content">PLEATED</a>
+            </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-img-background" style="background-image:url(images/shawl.jpg)"></div>
+
+            <div class="button-content ">
+              <a href="shawl.html" class="button-content">SHAWL</a>
+            </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-img-background" style="background-image:url(images/accesories.jpg)"></div>
+
+            <div class="button-content">
+              <a href="accessories.html" class="button-content">ACCESSORIES</a>
+            </div>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+
+  <div class="promote">
+    <h2>LETS CHECK IT OUT OUR COLLECTION!</h2>
+  </div>
+
+  <div class="footer"
+    <footer id="main-footer">
+      <p>This website is purposely for IMD311 Group assingment</p>
+
+    <footer id="mid-footer">
+      <ul>
+        <li><a href="https://www.instagram.com/twodung.hq"><img src="images/insta.png"></a></li>
+        <li><a href="mailto:twodung.ent@gmail.com"><img src="images/google.png"></a></li>
+      </ul>
+
+    <footer id="end-footer">
+      <p>Recommended Browser For This Website Is Google Chrome,Internet Explorer & Firefox</p>
+  </div>
+</body>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</html>
